@@ -1,0 +1,249 @@
+*{
+    margin:0;
+    padding:0;
+  }
+  
+  .menu{
+    display:flex;
+    margin-right:50px;
+  }
+  
+  .menu li{
+    list-style:none;
+    display:inline;
+    margin-left:10px;
+  }
+
+
+
+  .links li{
+    list-style:none;
+    text-align:left;
+    padding:15px;
+    border:ridge white;
+    border-width:2px;
+  }
+
+
+  .links a{
+   text-decoration:none;
+   color:rgb(0, 162, 255);
+  }
+  
+  .flex{
+    display:flex;
+    background:black;
+    color:white;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px;
+    margin-bottom:20px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+
+
+
+  /*Grid Inicio*/
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(4,25%);
+    grid-gap:10px;
+    max-width:1200px;
+    margin:50px auto;
+    font-family:Arial, Helvetica, sans-serif;
+    
+  }
+
+  .card1{
+    grid-row:1/6;
+    font-size:larger;
+    font-family:Arial, Helvetica, sans-serif;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    align-content:center;
+  }
+
+  .card2{
+    background:lightgray;
+    color:gray;
+    grid-column:2/5;
+    grid-row:1/5;
+    align-items:center;
+    justify-content:center;
+    display:flex;
+    padding:10px;
+  }
+
+  /*Grid Fim*/
+  
+
+  .menu a{
+    text-decoration:none;
+    color:white;
+  }
+
+  
+
+  .card1 h1{
+    font-size:40px;
+  }
+
+  .card1 h1:nth-child(2){
+    margin-bottom:20px;
+  }
+
+  .card1 span{
+    display:none;
+  }
+
+  .card{
+    background:lightgray;
+    text-align:center;
+    padding:10px;
+    
+  }
+
+   img{
+    width:100%;
+  }
+
+  .card img{
+    width:100%;
+    margin-bottom:10px;
+    
+  }
+
+
+  /*Menu mobile inicio*/
+
+   #menu_toggle{
+    display:none;
+   }
+
+   .menu_icon{
+    display:none;
+   }
+
+   @media screen and (max-width:760px){
+
+     .flex{
+        position:fixed;
+        top:0px;
+        width:100%;
+     }
+
+     .flex nav{
+       display:absolute;
+       height:100%;
+       width:100%;
+     }
+
+     .menu{
+      display:flex;
+      position:fixed;
+      top:0px;
+      left:0px;
+      flex-wrap:wrap;
+
+
+     }
+
+     .navigation{
+      background-color:rgba(0, 0, 0, 0.664);
+      height:100%;
+      width:100%;
+     }
+
+     .menu li{
+      display:block;
+      text-align:center;
+      width:100%;
+      margin-top:15vh;
+      margin-left:0px;
+      margin-bottom:20px;
+     }
+
+     .menu li a{
+      display:block;
+      text-align:center;
+      font-size:17px;
+     }
+
+     .menu li a:hover{
+      font-size:20px;
+     }
+     
+
+     .menu_icon{
+       width:50px;
+       height:inherit;
+       display:block;
+       position:absolute;
+       top:15px;
+       right:0px;
+     }
+
+     .menu_icon i{
+      display:block;
+      font-size:1.9em;
+     }
+
+
+     #menu_toggle:checked ~ label i:nth-child(2){
+      display:none;
+     }
+
+
+     #menu_toggle:checked ~ label i:first-child{
+       display:block;
+     }
+
+     #menu_toggle:not(checked) ~ label i:first-child{
+      display:none;
+     }
+
+     #menu_toggle:not(checked) ~ label i:nth-child(2){
+      display:block;
+     }
+
+     #menu_toggle:checked ~ ul{
+      display:none;
+     }
+
+   }
+
+
+  /*Menu Mobile fim*/
+
+  @media screen and (max-width:760px){
+
+
+    .card1 h1:nth-child(2){
+      display:none;
+    }
+
+    .card1 span{
+      display:inline;
+    }
+
+    .card1 h1{
+      margin-bottom:15px;
+    }
+
+    .grid{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:center;
+      margin:20 auto;
+      max-width:300px;
+    }
+
+
+  }
+
+ 
+
